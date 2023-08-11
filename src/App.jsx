@@ -17,6 +17,7 @@ function App() {
         </a>
       </div>
       <h1>This is a Cool Quiz App!</h1>
+      <h2>It is built with Vite, React, and Firebase</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
