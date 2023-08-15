@@ -13,8 +13,8 @@ function App() {
       <Routes> 
         {/* <div className="container"> */}
           <Route exact path="/" element={<Home/>} />
-          <Route path="/Game" component={Game} />
-          <Route path="/HighScores" component={HighScores} />
+          <Route exact path="/Game" element={<Game/>} />
+          <Route path="/HighScores" element={<HighScores />} />
         {/* </div> */}
       </Routes>
     </Router> 
