@@ -31,6 +31,7 @@ h2 {
   font-size: 4.2rem;
   margin-bottom: 4rem;
   font-weight: 700;
+  color: aliceblue;
 }
 
 /* UTILITIES */
@@ -61,8 +62,9 @@ h2 {
   border: 0.1rem solid #56a5eb;
   margin-bottom: 1rem;
   text-decoration: none;
-  color: #56a5eb;
-  background-color: white;
+  /* color: #56a5eb; */
+  color: #021b37;
+  background-color: aliceblue;
 }
 
 .btn:hover {
@@ -107,7 +109,7 @@ input::placeholder {
   width: 100%;
   font-size: 1.8rem;
   border: 0.1rem solid rgb(86, 165, 235, 0.25);
-  background-color: white;
+  background-color: aliceblue;
 }
 
 .choice-container:hover {
