@@ -7,28 +7,24 @@ export default class Game extends Component {
         this.state = {
             questions: null,
             currentQuestion: null,
+            loading: true
         }
     }
 
-async componentDidMount() {
-    const url = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple';
-        
+async componentDidMount() {    
     try {
         const questions = await loadQuestions();
-        console.log(questions);
-
-        this.setState({
-            currentQuestion: questions[0],
-        });
-    }
-    catch(err) {
+        this.setState({ currentQuestion: questions[0], loading: false,});
+    } catch(err) {
         console.error(err);
     }
 }
+
     render() { 
         return (
             <div className="container">
-                {this.state.currentQuestion && (
+                {this.state.loading && <div id="loader" />}
+                {!this.state.loading && this.state.currentQuestion && (
                 <Question question={this.state.currentQuestion} />
                 )}
             </div>
